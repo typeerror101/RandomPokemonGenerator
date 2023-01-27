@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import "./index.css"
 import PokemonList from './PokemonList'
 import Pagination from "./Pagination";
 import axios from "axios";
@@ -41,13 +42,14 @@ function App() {
   
 
   return (
-    <>
-    <PokemonList pokemon={pokemon} />
-    <Pagination 
+    <div id="div1">
+    <h1>Pokemon Names Generator</h1>
+    <div id="div2"><PokemonList pokemon={pokemon} /></div>
+    <div id="div3"><Pagination   
     goToNextPage={nextPageUrl ? goToNextPage : null}
     goToPrevPage={previousPageUrl ? goToPrevPage : null}
-    />
-    </>
+    /></div>
+    </div>
   );
 }
 
